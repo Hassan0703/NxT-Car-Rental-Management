@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{cars_brand}-{cars_model}-{##}",
+ "creation": "2025-02-25 15:34:35.669329",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ohpg",
+  "amended_from",
+  "cars_brand",
+  "cars_type",
+  "cars_transmission",
+  "cars_model",
+  "cars_registration_number",
+  "doors",
+  "passengers",
+  "luggage",
+  "air_condition",
+  "car_prices",
+  "cars_pic"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ohpg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Car Details",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "cars_brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Car's Brand",
+   "options": "Car Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cars_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Car's Type",
+   "options": "Car Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cars_transmission",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Car's Transmission",
+   "options": "Car Transmission",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cars_model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Car's Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cars_registration_number",
+   "fieldtype": "Data",
+   "label": "Car's Registration Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doors",
+   "fieldtype": "Int",
+   "label": "Doors"
+  },
+  {
+   "fieldname": "passengers",
+   "fieldtype": "Data",
+   "label": "Passengers"
+  },
+  {
+   "fieldname": "luggage",
+   "fieldtype": "Data",
+   "label": "Luggage"
+  },
+  {
+   "fieldname": "air_condition",
+   "fieldtype": "Select",
+   "label": "Air Condition",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "cars_pic",
+   "fieldtype": "Attach Image",
+   "label": "Car's Pic",
+   "reqd": 1
+  },
+  {
+   "default": "50000",
+   "fieldname": "car_prices",
+   "fieldtype": "Currency",
+   "label": "Car Prices"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-25 16:27:58.283320",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Car Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

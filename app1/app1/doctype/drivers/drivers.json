@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DN-{MM}-{DD}-{YY}-{driver_name}",
+ "creation": "2025-02-16 14:12:24.906334",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "driver_name",
+  "phone_number",
+  "drivers_cnic",
+  "address",
+  "drivers_licence_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "drivers_cnic",
+   "fieldtype": "Data",
+   "label": "Driver's CNIC"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "drivers_licence_number",
+   "fieldtype": "Data",
+   "label": "Driver's Licence Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-16 22:56:57.949028",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Drivers",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

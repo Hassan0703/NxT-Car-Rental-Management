@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>NxT RMS</title>
+    <link rel="shortcut icon" href="/assets/app1/img/favicon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="/assets/app1/css/plugins.css" />
+    <link rel="stylesheet" href="/assets/app1/css/style.css" />
+
+    <link rel="stylesheet" href="/assets/app1/css/plugins/animate.min.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/datepicker.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/flaticon.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/font-awesome-pro.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/magnific-popup.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/omFont.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/owl.carousel.min.min.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/select2.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/themify-icons.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/vegas.slider.min.css" />
+    <link rel="stylesheet" href="/assets/app1/css/plugins/YouTubePopUp.css" />
+
+
+<script>
+        window.frappe = {};
+        frappe.ready_events = [];
+        frappe.ready = function(fn) {
+            frappe.ready_events.push(fn);
+        }
+        window.dev_server = {{ dev_server }};
+        window.socketio_port = {{ (frappe.socketio_port or 'null') }};
+        window.show_language_picker = {{ show_language_picker or 'false' }};
+    </script>
+</head>
+
+<body>
+
+
+     {% include "/templates/pages/header.html" %}
+    
+    {% block css %}{% endblock %}
+
+    {% block content %}{% endblock %}
+    
+
+
+    <!-- {% include "/templates/pages/footer.html" %} -->
+
+    {% block logscript %}{% endblock %}
+
+    {% block base_scripts %}
+	<!-- js should be loaded in body! -->
+	<script>
+		frappe.boot = {{ boot | json }}
+		// for backward compatibility of some libs
+		frappe.sys_defaults = frappe.boot.sysdefaults;
+	</script>
+	{{ include_script('frappe-web.bundle.js') }}
+	{% endblock %}
+
+	{%- for link in web_include_js %}
+	{{ include_script(link) }}
+	{%- endfor -%}
+
+	{%- block script %}
+		{% if colocated_js -%}
+			<script>{{ colocated_js }}</script>
+		{%- endif %}
+	{%- endblock %}
+	<!-- csrf_token -->
+	{%- block body_include %}{{ body_include or "" }}{% endblock -%}
+  <!-- Vendor JS Files -->
+   <!-- JavaScript Libraries -->
+
+   <script src="/assets/app1/js/jquery-3.7.1.min.js"></script>
+   <script src="/assets/app1/js/jquery-migrate-3.4.1.min.js"></script>
+   <script src="/assets/app1/js/modernizr-2.6.2.min.js"></script>
+   <script src="/assets/app1/js/imagesloaded.pkgd.min.js"></script>
+   <script src="/assets/app1/js/jquery.isotope.v3.0.2.js"></script>
+   <script src="/assets/app1/js/popper.min.js"></script>
+   <script src="/assets/app1/js/bootstrap.min.js"></script>
+   <script src="/assets/app1/js/scrollIt.min.js"></script>
+   <script src="/assets/app1/js/jquery.waypoints.min.js"></script>
+   <script src="/assets/app1/js/owl.carousel.min.js"></script>
+   <script src="/assets/app1/js/jquery.stellar.min.js"></script>
+   <script src="/assets/app1/js/jquery.magnific-popup.js"></script>
+   <script src="/assets/app1/js/select2.js"></script>
+   <script src="/assets/app1/js/datepicker.js"></script>
+   <script src="/assets/app1/js/YouTubePopUp.js"></script>
+   <script src="/assets/app1/js/vegas.slider.min.js"></script>
+   <script src="/assets/app1/js/custom.js"></script>
+   
+   <!-- Template Javascript -->
+   <!-- <script src="js/main.js"></script> -->
+</body>
+</html>

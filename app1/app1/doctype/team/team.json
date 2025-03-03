@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2025-02-26 15:40:06.214448",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_0ya2",
+  "amended_from",
+  "name1",
+  "position",
+  "biography",
+  "education",
+  "awards",
+  "license",
+  "languages",
+  "profile"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_0ya2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Team",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Position",
+   "reqd": 1
+  },
+  {
+   "fieldname": "biography",
+   "fieldtype": "Small Text",
+   "label": "Biography"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Small Text",
+   "label": "Education"
+  },
+  {
+   "fieldname": "awards",
+   "fieldtype": "Data",
+   "label": "Awards"
+  },
+  {
+   "fieldname": "license",
+   "fieldtype": "Data",
+   "label": "License"
+  },
+  {
+   "fieldname": "languages",
+   "fieldtype": "Data",
+   "label": "Languages"
+  },
+  {
+   "fieldname": "profile",
+   "fieldtype": "Attach Image",
+   "label": "Profile"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-26 16:07:43.109749",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Team",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,176 @@
+{% extends "templates/web2.html" %}
+
+{% block title %}{{ _("Sign-up Form") }}{% endblock %}
+
+{% block page_content %}
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      max-width: 100%;
+      margin-top: 200px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus {
+      border-color: #4CAF50;
+      outline: none;
+    }
+
+    .form-group input::placeholder {
+      color: #bbb;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+
+    .form-group button:focus {
+      outline: none;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Contact Form</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message</label>
+        <input type="text" id="message" name="message" placeholder="Enter your message" required>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" onclick="myFunction()">Submit</button>
+      </div>
+    </form>
+    <script>
+        function myFunction(Event) {
+
+            event.preventDefault();
+
+            let user_name = document.getElementById("name").value;
+            let user_email = document.getElementById("email").value;
+            let user_phone = document.getElementById("phone").value;
+            let user_address = document.getElementById("address").value;
+            let user_message = document.getElementById("message").value;
+
+            if (user_name && user_email && user_phone && user_address && user_message) {
+                frappe.call({
+                    method: 'app1.Events.new_customer.add_new_customer',
+                    args: {
+                        name: user_name,
+                        email: user_email,
+                        phone: user_phone,
+                        address: user_address,
+                        message: user_message
+                    },
+                    callback: function(r) {
+                        if (r.message) {
+                            console.log(r.message);
+                            frappe.msgprint(r.message);
+                        } else {
+                            console.log("No response message from server.");
+                        }
+                    }
+                }).then(r => {
+                    console.log("Task completed");
+                });
+            } else {
+                // Alert if any field is missing
+                frappe.msgprint("Please fill out all the fields.");
+            }
+        }
+
+    </script>
+    
+    <div class="form-footer">
+      <p>&copy; 2025 NexTash.com</p>
+    </div>
+  </div>
+
+</body>
+
+{% endblock %}
+
+{%- block footer -%}
+{%- endblock -%}
+

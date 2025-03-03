@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2025-02-07 19:43:22.489418",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_first_name",
+  "customer_last_name",
+  "full_name",
+  "customer_contact_number",
+  "customers_email",
+  "customers_driving_licence_number",
+  "customers_date_of_birth"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_contact_number",
+   "fieldtype": "Phone",
+   "label": "Customer Contact Number"
+  },
+  {
+   "fieldname": "customers_email",
+   "fieldtype": "Data",
+   "label": "Customer's Email"
+  },
+  {
+   "fieldname": "customers_driving_licence_number",
+   "fieldtype": "Data",
+   "label": "Customer's Driving Licence Number"
+  },
+  {
+   "fieldname": "customers_date_of_birth",
+   "fieldtype": "Date",
+   "label": "Customer's Date of Birth"
+  },
+  {
+   "fieldname": "customer_first_name",
+   "fieldtype": "Data",
+   "label": "Customer First Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Customer's Full Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "customer_last_name",
+   "fieldtype": "Data",
+   "label": "Customer Last Name",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-12 11:26:53.473667",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Customer Details",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

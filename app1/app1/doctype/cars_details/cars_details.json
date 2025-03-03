@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:cars_model",
+ "creation": "2025-02-07 19:34:52.209147",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ppxa",
+  "amended_from",
+  "cars_brand",
+  "cars_model",
+  "cars_registration_number",
+  "transmittion",
+  "cars_price",
+  "available_cars",
+  "available"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ppxa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cars Details",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "cars_brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Car's Brand",
+   "options": "Car Brand"
+  },
+  {
+   "fieldname": "cars_model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Car's Model",
+   "unique": 1
+  },
+  {
+   "fieldname": "cars_registration_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Car's Registration Number"
+  },
+  {
+   "fieldname": "transmittion",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transmittion",
+   "options": "Automatic\nManual"
+  },
+  {
+   "default": "1",
+   "fieldname": "available",
+   "fieldtype": "Check",
+   "label": "Available"
+  },
+  {
+   "fieldname": "available_cars",
+   "fieldtype": "Link",
+   "label": "Available Cars",
+   "options": "Cars Details"
+  },
+  {
+   "default": "5999",
+   "fieldname": "cars_price",
+   "fieldtype": "Currency",
+   "label": "Car's Price"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-14 15:13:01.835500",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Cars Details",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

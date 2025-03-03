@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RA-{MM}-{DD}-{YY}-{customer}",
+ "creation": "2025-02-07 22:38:19.024707",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_e8rj",
+  "amended_from",
+  "customer",
+  "customers_prefer_car_brand",
+  "car_transmission",
+  "column_break_ixup",
+  "rental_start_date",
+  "vehicle_service",
+  "section_break_sqlf",
+  "customers_billing",
+  "section_break_ibev",
+  "column_break_qnks",
+  "column_break_fjxv",
+  "sub_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_e8rj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rental Agreement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer Details"
+  },
+  {
+   "fieldname": "rental_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Rental Start Date",
+   "reqd": 1
+  },
+  {
+   "default": "With Driver(2999Rs)",
+   "fieldname": "vehicle_service",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vehicle Service",
+   "options": "With Driver(2999Rs)\nWithout Driver(Original Price)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customers_billing",
+   "fieldtype": "Table",
+   "label": "Customer's Billing",
+   "options": "Customer Bill"
+  },
+  {
+   "fieldname": "customers_prefer_car_brand",
+   "fieldtype": "Link",
+   "label": "Customer's Prefer Car Brand",
+   "options": "Car Brand"
+  },
+  {
+   "default": "0",
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ixup",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_sqlf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ibev",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qnks",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fjxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "car_transmission",
+   "fieldtype": "Select",
+   "label": "Car Transmission",
+   "options": "\nAutomatic\nManual"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-17 11:32:47.580100",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Rental Agreement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

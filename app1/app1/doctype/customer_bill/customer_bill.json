@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-08 11:55:08.745551",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "selected_car",
+  "select_driver",
+  "drivers_rent",
+  "rental_duration_days_",
+  "rate",
+  "total_rental_pricepkr"
+ ],
+ "fields": [
+  {
+   "fieldname": "rental_duration_days_",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Rental Duration (Days )"
+  },
+  {
+   "fieldname": "total_rental_pricepkr",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Rental Price(PKR)"
+  },
+  {
+   "fieldname": "selected_car",
+   "fieldtype": "Link",
+   "label": "Selected Car",
+   "options": "Cars Details"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "selected_car.cars_price",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "select_driver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Select Driver",
+   "options": "Drivers"
+  },
+  {
+   "fieldname": "drivers_rent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Driver's Rent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-17 11:29:22.971215",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Customer Bill",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
